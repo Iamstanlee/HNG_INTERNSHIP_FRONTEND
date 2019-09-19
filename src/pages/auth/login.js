@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import BackendApi from "./backendApi";
 import qs from "qs";
+import History from '../../components/history';
 
 import "./sign.css";
 
@@ -40,7 +41,8 @@ class Login extends Component {
           Err: "Invalid details or Account does not exist"
         });
       }
-      return "";
+      History.push('/welcome');
+      ;
     });
   };
 
